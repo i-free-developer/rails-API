@@ -1,24 +1,23 @@
-# README
+#### Rails API CRUD
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+1. Add route in config/routes.rb
+```
+namespace :api, defaults: { format: :json } do
+  namespace :v1 do
+    resources :stories, only: [:index]      
+  end
+end
+```
+2. Add action in controllers/api/v1/stories_controller.rb
 
-* Ruby version
+```
+def index
+end
+```
+3. Add view if needed in views/api/v1/stories/index.json.jbuilder
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+index.json.jbuilder
+```
